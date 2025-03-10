@@ -1,0 +1,80 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: .75em;
+  column-gap: .75em;
+  padding: 1em;
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border-radius: .5em;
+  border: 1px solid var(--gray-400);
+  position: relative;
+}
+
+.doneTask {
+  color: var(--gray-300);
+}
+
+.doneTask .description {
+  text-decoration: line-through;
+}
+
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--blue);
+}
+
+.toggleBtn:hover {
+  background-color: hsl(from var(--blue-dark) h 30 20%);
+}
+
+.doneTask .toggleBtn {
+  background-color: var(--purple-dark);
+}
+
+.doneTask .toggleBtn:hover {
+  background-color: var(--purple);
+}
+
+.description {
+  line-height: 1em;
+  word-break: break-word;
+  flex-basis: 90%;
+}
+
+.delBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: .25em;
+  position: relative;
+  background-color: transparent;
+  padding: .25em;
+
+  position: absolute;
+  right: .5em;
+  top: .5em;
+}
+
+.delBtn:hover {
+  background-color: var(--gray-400);
+}
+
+.delBtn .icon {
+  height: 1.5em;
+  width: 1.5em;
+  -webkit-mask: url('./../assets/trash.svg') no-repeat center;
+  mask: url('./../assets/trash.svg') no-repeat center;
+  background-color: var(--gray-300);
+}
+
+.delBtn:hover .icon {
+  background-color: var(--red);
+}
